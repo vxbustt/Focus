@@ -23,3 +23,28 @@ button {
   border-radius: 0;
   background-image:"./";
 }
+
+label[for="bgmode"] {
+  color: white;
+  border-color: black;
+  font-size: 16px;
+  padding-bottom: 50px;
+}
+
+h2[for="taskslabel"] {
+  color: white;
+  border-color: black;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.tasklabel {
+  color: white;
+  border-color: black;
+  font-size: 20px;
+}
+
+.shh {
+  color: white;
+  border-color: black;
+}
