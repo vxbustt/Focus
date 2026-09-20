@@ -44,3 +44,5 @@ BackToMain?.addEventListener("click", () => {
   mainscreen?.removeAttribute("hidden");
   settingsscreen?.setAttribute("hidden", "")
 })
+
+console.log("hello yellow verity")
