@@ -38,17 +38,22 @@ const input = document.getElementById("taskInput") as HTMLInputElement;
 const AddTaskButton = document.getElementById("AddTask");
 const CompletedLabel = document.getElementById("Completed")
 const TasksLabel = document.getElementById("Tasks")
+const AllowDupsCheck = document.getElementById("allowdups") as HTMLInputElement
 
 let currentidx = 0
 let taskamount = 0
 let completedamount = 0
+
+let Settings = {
+  AllowDuplicates:false
+}
 
 const usedTexts: Record<string, boolean> = {};
 
 function addTask(text: string): any {
     const task = document.createElement("div");
 
-    if (usedTexts[text] || text.length <= 0) {
+    if ((usedTexts[text] && Settings.AllowDuplicates != true) || text.length <= 0) {
       return undefined;
     };
 
@@ -103,6 +108,10 @@ BackToMain?.addEventListener("click", () => {
 
 AddTaskButton?.addEventListener("click", () => {
   addTask(input.value)
+})
+
+AllowDupsCheck?.addEventListener("change", () => {
+  Settings.AllowDuplicates = AllowDupsCheck.checked
 })
 
 console.log("hello yellow verity")
